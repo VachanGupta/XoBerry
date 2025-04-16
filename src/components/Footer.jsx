@@ -5,7 +5,6 @@ const Footer = () => {
     <footer className="bg-chocolate-drizzle text-sugar-dust py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and description */}
           <div className="md:col-span-1">
             <div className="flex items-center mb-4">
               <span className="text-berry-bliss font-bold text-2xl">XoBerry</span>
@@ -14,7 +13,6 @@ const Footer = () => {
               Handcrafted ice cream made with the freshest berries and finest ingredients.
             </p>
             <div className="flex space-x-4">
-              {/* Social media icons */}
               <a href="#" className="text-sugar-dust hover:text-berry-bliss transition-colors duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
@@ -33,7 +31,6 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Quick links */}
           <div className="md:col-span-1">
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -44,7 +41,6 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Contact info */}
           <div className="md:col-span-1">
             <h3 className="text-lg font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2">
@@ -70,7 +66,6 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Newsletter */}
           <div className="md:col-span-1">
             <h3 className="text-lg font-bold mb-4">Stay Updated</h3>
             <p className="text-sm mb-4">Subscribe to our newsletter for the latest flavors and promotions.</p>

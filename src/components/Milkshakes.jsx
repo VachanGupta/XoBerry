@@ -52,9 +52,8 @@ const Milkshakes = () => {
 
   // State to track current page and items per page
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 4; // Show 4 items per page
+  const itemsPerPage = 4;
   
-  // Flatten all milkshakes into a single array for pagination
   const allMilkshakes = milkshakes.flatMap(category => 
     category.images.map(shake => ({
       ...shake,

@@ -5,7 +5,7 @@ const BobaTea = () => {
   const [selectedCategory, setSelectedCategory] = useState(1);
   const [animating, setAnimating] = useState(false);
   
-  // Data for the boba tea carousel
+
   const bobaTeaVarieties = [
     {
       id: 1,
@@ -53,7 +53,7 @@ const BobaTea = () => {
     },
   ];
 
-  // State to track active slide for each carousel
+
   const [activeSlides, setActiveSlides] = useState({
     1: 0,
     2: 0,
@@ -61,7 +61,7 @@ const BobaTea = () => {
     4: 0,
   });
 
-  // Function to navigate to next slide
+
   const nextSlide = (carouselId) => {
     setActiveSlides(prev => ({
       ...prev,
@@ -69,7 +69,7 @@ const BobaTea = () => {
     }));
   };
 
-  // Function to navigate to previous slide
+
   const prevSlide = (carouselId) => {
     setActiveSlides(prev => ({
       ...prev,
@@ -87,7 +87,7 @@ const BobaTea = () => {
   return (
     <section id="bobatea" className="py-16 md:py-32 bg-gradient-to-br from-teal-50 via-blueberry-mist to-blue-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Decorative elements */}
+
         <motion.div 
           className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-teal-200 opacity-30"
           animate={{
@@ -131,7 +131,7 @@ const BobaTea = () => {
           </motion.div>
         </div>
 
-        {/* Category tabs */}
+
         <div className="mb-12">
           <motion.div 
             className="flex flex-wrap justify-center gap-4 mb-12"
@@ -154,7 +154,7 @@ const BobaTea = () => {
           </motion.div>
         </div>
 
-        {/* Featured boba tea display */}
+
         <div className="relative min-h-[500px] mb-16">
           <AnimatePresence mode="wait">
             {bobaTeaVarieties.map((category) => {
@@ -213,7 +213,7 @@ const BobaTea = () => {
                       </div>
                     </div>
                     
-                    {/* Floating boba pearls */}
+
                     {[...Array(8)].map((_, i) => (
                       <motion.div
                         key={i}
@@ -241,7 +241,7 @@ const BobaTea = () => {
           </AnimatePresence>
         </div>
         
-        {/* Call to action */}
+
         <motion.div 
           className="text-center py-12 px-6 bg-white/30 backdrop-blur-md rounded-3xl shadow-lg"
           initial={{ opacity: 0, y: 30 }}
