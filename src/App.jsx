@@ -6,7 +6,6 @@ import Milkshakes from './components/Milkshakes'
 import Bingsu from './components/Bingsu'
 import BobaTea from './components/BobaTea'
 import Process from './components/Process'
-import Locations from './components/Locations'
 import Footer from './components/Footer'
 
 const App = () => {
@@ -19,7 +18,6 @@ const App = () => {
       <Milkshakes />
       <Bingsu />
       <BobaTea />
-      <Locations />
       <Footer />
     </div>
   )

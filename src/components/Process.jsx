@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Process = () => {
-  // Steps in the ice cream making process
   const steps = [
     {
       id: 1,
@@ -73,17 +72,14 @@ const Process = () => {
         </div>
         
         <div className="relative">
-          {/* Process timeline */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-raspberry-whip transform -translate-x-1/2"></div>
           
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
               <div key={step.id} className="relative">
                 <div className={`md:flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                  {/* Timeline dot (visible on md screens and up) */}
                   <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-berry-bliss border-4 border-vanilla-cream z-10"></div>
                   
-                  {/* Content */}
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
                     <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 transition-transform duration-300">
                       <div className={`flex items-center mb-4 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
@@ -94,7 +90,6 @@ const Process = () => {
                     </div>
                   </div>
                   
-                  {/* Empty space for the other side */}
                   <div className="md:w-1/2"></div>
                 </div>
               </div>
@@ -102,7 +97,6 @@ const Process = () => {
           </div>
         </div>
         
-        {/* Animation illustration */}
         <div className="mt-16 bg-vanilla-cream rounded-xl p-8 shadow-lg">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0">
@@ -126,10 +120,7 @@ const Process = () => {
             
             <div className="md:w-1/2">
               <div className="relative">
-                {/* Animation container */}
                 <div className="w-full h-64 md:h-80 bg-sugar-dust rounded-lg overflow-hidden relative">
-                  {/* This would be replaced with actual animation in a real implementation */}
-                  {/* For now, we'll use a placeholder with berry icons that move */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <div className="flex justify-center space-x-4 mb-4">
