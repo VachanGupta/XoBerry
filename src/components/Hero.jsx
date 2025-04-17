@@ -65,22 +65,22 @@ const Hero = () => {
             </button>
           </div>
           
-          <div className="md:w-1/2 relative">
-          <div className="w-48 h-48 md:w-64 md:h-64 bg-strawberry-milk rounded-full mx-auto relative">
+          <div className="md:w-1/2 relative mt-8 md:mt-0">
+            <div className="w-48 h-48 md:w-64 md:h-64 bg-strawberry-milk rounded-full mx-auto relative">
 
               {/* Berry circle */}
               <div className="absolute inset-0 flex items-center justify-center">
                 {berries.map((berry, index) => {
                   // Calculate position around the circle
                   const angle = (index / berries.length) * 2 * Math.PI;
-                  const radius = 80; // Adjust based on circle size
+                  const radius = window.innerWidth < 768 ? 70 : 80; // Smaller radius on mobile
                   const left = 50 + radius * Math.cos(angle);
                   const top = 50 + radius * Math.sin(angle);
                   
                   return (
                     <div 
                       key={berry.id}
-                      className={`absolute ${berry.color} w-12 h-12 rounded-full cursor-pointer transform transition-all duration-300 hover:scale-110 shadow-md`}
+                      className={`absolute ${berry.color} w-10 h-10 md:w-12 md:h-12 rounded-full cursor-pointer transform transition-all duration-300 hover:scale-110 shadow-md`}
                       style={{
                         left: `${left}%`,
                         top: `${top}%`,
@@ -94,10 +94,10 @@ const Hero = () => {
                 
                 {/* Berry info popup */}
                 {activeBerry && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-lg max-w-xs text-center">
-                      <h3 className="text-berry-bliss font-bold text-lg">{activeBerry.name}</h3>
-                      <p className="text-chocolate-drizzle">{activeBerry.description}</p>
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <div className="bg-white bg-opacity-90 p-3 md:p-4 rounded-lg shadow-lg max-w-[200px] md:max-w-xs text-center">
+                      <h3 className="text-berry-bliss font-bold text-base md:text-lg">{activeBerry.name}</h3>
+                      <p className="text-chocolate-drizzle text-sm md:text-base">{activeBerry.description}</p>
                     </div>
                   </div>
                 )}
