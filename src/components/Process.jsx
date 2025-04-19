@@ -129,7 +129,7 @@ const Process = () => {
                         <div className="w-8 h-8 rounded-full bg-berry-bliss animate-bounce" style={{ animationDelay: '0.4s' }}></div>
                       </div>
                       <p className="text-chocolate-drizzle font-medium">Berry to Ice Cream Animation</p>
-                      <p className="text-sm text-chocolate-drizzle">In a real implementation, this would be a smooth animation showing the process</p>
+                      
                     </div>
                   </div>
                 </div>
