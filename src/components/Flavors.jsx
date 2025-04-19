@@ -49,7 +49,7 @@ const Flavors = () => {
     },
   ];
 
-  // State to track active slide for each carousel
+  // 4 mein se konse carousel ke konse page par hai hum
   const [activeSlides, setActiveSlides] = useState({
     1: 0,
     2: 0,
@@ -57,7 +57,7 @@ const Flavors = () => {
     4: 0,
   });
 
-  // Function to navigate to next slide
+  // move forward
   const nextSlide = (carouselId) => {
     setActiveSlides(prev => ({
       ...prev,
@@ -65,7 +65,7 @@ const Flavors = () => {
     }));
   };
 
-  // Function to navigate to previous slide
+  // move backward
   const prevSlide = (carouselId) => {
     setActiveSlides(prev => ({
       ...prev,
@@ -74,31 +74,31 @@ const Flavors = () => {
   };
 
   return (
-    <section id="flavors" className="py-16 md:py-24 bg-vanilla-cream">
+    <section id="flavors" className="py-16 bg-vanilla-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-chocolate-drizzle mb-4">
-            Our <span className="text-berry-bliss">Berry</span> Flavors
+          <h2 className="text-3xl md:text-5xl font-bold text-chocolate-drizzle mb-4">
+            Our <span className="text-berry-bliss font-extrabold">Berry</span> Flavors
           </h2>
           <p className="text-lg text-chocolate-drizzle max-w-3xl mx-auto">
             Explore our delicious selection of handcrafted berry ice creams, made with the freshest ingredients and bursting with flavor.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {carousels.map((carousel) => (
             <div key={carousel.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="p-6 bg-sugar-dust">
+              <div className="p-4">
                 <h3 className="text-xl font-bold text-berry-bliss mb-2">{carousel.title}</h3>
-                <p className="text-chocolate-drizzle">{carousel.description}</p>
+                <p className="text-sm text-chocolate-drizzle mb-4">{carousel.description}</p>
               </div>
               
-              <div className="relative h-64 md:h-80">
+              <div className="relative h-64">
                 {/* Carousel images */}
                 {carousel.images.map((image, index) => (
                   <div 
                     key={image.id}
-                    className={`absolute inset-0 transition-opacity duration-500 ${index === activeSlides[carousel.id] ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                    className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${index === activeSlides[carousel.id] ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
                   >
                     <img 
                       src={image.src} 
@@ -106,7 +106,7 @@ const Flavors = () => {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                      <p className="text-sugar-dust font-medium text-lg">{image.name}</p>
+                      <p className="text-white font-medium text-center">{image.name}</p>
                     </div>
                   </div>
                 ))}
@@ -114,33 +114,35 @@ const Flavors = () => {
                 {/* Navigation arrows */}
                 <button 
                   onClick={() => prevSlide(carousel.id)} 
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2 backdrop-blur-sm transition-colors duration-300"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/80 rounded-full p-1 shadow-md hover:bg-white transition-colors duration-200"
                   aria-label="Previous slide"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-sugar-dust" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-berry-bliss" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
                 <button 
                   onClick={() => nextSlide(carousel.id)} 
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2 backdrop-blur-sm transition-colors duration-300"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/80 rounded-full p-1 shadow-md hover:bg-white transition-colors duration-200"
                   aria-label="Next slide"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-sugar-dust" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-berry-bliss" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
                 
                 {/* Dots indicator */}
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-                  {carousel.images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveSlides(prev => ({ ...prev, [carousel.id]: index }))}
-                      className={`w-2 h-2 rounded-full transition-colors duration-300 ${index === activeSlides[carousel.id] ? 'bg-berry-bliss' : 'bg-white/50'}`}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
+                <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center">
+                  <div className="flex space-x-2">
+                    {carousel.images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setActiveSlides(prev => ({ ...prev, [carousel.id]: index }))}
+                        className={`w-2 h-2 rounded-full ${index === activeSlides[carousel.id] ? 'bg-berry-bliss' : 'bg-white/60'} transition-colors duration-200`}
+                        aria-label={`Go to slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

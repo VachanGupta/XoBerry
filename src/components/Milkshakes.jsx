@@ -131,7 +131,7 @@ const Milkshakes = () => {
           </motion.p>
         </div>
 
-        {/* Featured milkshake */}
+        {/* featured milkshake */}
         <motion.div 
           className="mb-16 relative z-10 bg-white rounded-2xl shadow-xl overflow-hidden"
           initial={{ opacity: 0, y: 40 }}
@@ -162,7 +162,6 @@ const Milkshakes = () => {
           </div>
         </motion.div>
 
-        {/* Paginated grid section */}
         <div className="relative z-10">
           <div className="flex justify-between items-center mb-6">
             <h3 className="text-2xl font-bold text-chocolate-drizzle">Explore Our Varieties</h3>
@@ -233,7 +232,7 @@ const Milkshakes = () => {
             </AnimatePresence>
           </div>
           
-          {/* Pagination dots */}
+
           <div className="flex justify-center space-x-2 mb-4">
             {[...Array(totalPages)].map((_, index) => (
               <button

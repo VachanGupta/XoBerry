@@ -7,17 +7,18 @@ import Bingsu from './components/Bingsu'
 import BobaTea from './components/BobaTea'
 import Process from './components/Process'
 import Footer from './components/Footer'
+import './App.css'
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-vanilla-cream">
+    <div className="app-container">
       <Navbar />
       <Hero />
       <Flavors />
       <Process />
-      <Milkshakes />
+      {/* <Milkshakes /> */}
       <Bingsu />
-      <BobaTea />
+      {/* <BobaTea /> */}
       <Footer />
     </div>
   )

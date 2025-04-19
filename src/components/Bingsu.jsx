@@ -230,3 +230,4 @@ const Bingsu = () => {
 };
 
 export default Bingsu;
+
