@@ -16,9 +16,9 @@ const App = () => {
       <Hero />
       <Flavors />
       <Process />
-      {/* <Milkshakes /> */}
+      <Milkshakes />
       <Bingsu />
-      {/* <BobaTea /> */}
+      <BobaTea />
       <Footer />
     </div>
   )

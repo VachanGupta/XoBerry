@@ -47,7 +47,6 @@ const Navbar = () => {
             <a href="#home" className="text-chocolate-drizzle hover:text-berry-bliss block px-3 py-2 rounded-md font-medium">Home</a>
             <a href="#flavors" className="text-chocolate-drizzle hover:text-berry-bliss block px-3 py-2 rounded-md font-medium">Our Flavors</a>
             <a href="#process" className="text-chocolate-drizzle hover:text-berry-bliss block px-3 py-2 rounded-md font-medium">How We Make It</a>
-            <a href="#locations" className="text-chocolate-drizzle hover:text-berry-bliss block px-3 py-2 rounded-md font-medium">Locations</a>
             <button className="w-full text-center bg-berry-bliss text-sugar-dust px-4 py-2 rounded-full font-medium hover:bg-raspberry-whip mt-2">Order Now</button>
           </div>
         </div>

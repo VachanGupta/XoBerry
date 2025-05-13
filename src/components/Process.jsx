@@ -4,8 +4,8 @@ const Process = () => {
   const steps = [
     {
       id: 1,
-      title: 'Select Fresh Berries',
-      description: 'We carefully select the ripest, most flavorful berries from local farms.',
+      title: 'Import Fresh Berries',
+      description: 'We carefully import the ripest, most flavorful berries from international markets.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-berry-bliss" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
